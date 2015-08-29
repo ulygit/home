@@ -1,0 +1,8 @@
+/*
+!/.gitignore
+!/.profile
+
+# save ss config but not keys (sneaky bastards)
+!/.ssh
+/.ssh/*
+!/.ssh/config
