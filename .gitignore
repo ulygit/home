@@ -1,6 +1,8 @@
 /*
 !/.gitignore
-!/.profile
+!/.tmux.conf
+!/.vimrc
+!/.zshrc
 
 # save ss config but not keys (sneaky bastards)
 !/.ssh
