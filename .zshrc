@@ -49,7 +49,7 @@ plugins=(git colored-man colorize github vagrant virtualenv pip python brew osx 
 
 # User configuration
 
-export PATH="/usr/local/heroku/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/grant/.jenv/shims"
+export PATH="$HOME/.node/bin:/usr/local/heroku/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/grant/.jenv/shims"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -95,3 +95,6 @@ bindkey '^r' history-incremental-search-backward
 
 # initialize jenv if it's present
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+# local maven repository
+export M2_REPO=~/.m2/repository

@@ -8,6 +8,7 @@ Plug 'flazz/vim-colorschemes'
 " for javascript editing (but not exclusively)
 Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript'
+Plug 'othree/html5.vim'
 
 " miscellaneous development plugins
 Plug 'nathanaelkane/vim-indent-guides'
@@ -30,3 +31,6 @@ set hlsearch
 
 " syntastic errors to ignore.
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
