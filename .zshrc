@@ -70,17 +70,6 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias zshconfig="subl ~/.zshrc"
-alias envconfig="subl ~/Projects/config/env.sh"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-
 # vi line editor
 bindkey -v
 # vi line editor mode switch delay 
@@ -98,3 +87,30 @@ if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 # local maven repository
 export M2_REPO=~/.m2/repository
+
+
+# ########
+# ALIASES
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+# ########
+#
+# Example aliases
+alias zshconfig="subl ~/.zshrc"
+alias envconfig="subl ~/Projects/config/env.sh"
+
+alias pss="ps aux | grep "
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+# ########
+# FUNCTIONS
+# ########
+
+function vizsh() {
+  vi ~/.zshrc;
+  source ~/.zshrc;
+  echo "Sourced ~/.zshrc";
+}

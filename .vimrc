@@ -14,6 +14,12 @@ Plug 'othree/html5.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/syntastic'
+
+" for vim-orgmode
+Plug 'tpope/vim-speeddating'
+
+" command-t
+Plug 'wincent/command-t'
 call plug#end()
 
 set t_Co=256
@@ -30,7 +36,7 @@ set hlsearch
 " let g:syntastic_check_on_open=1
 
 " syntastic errors to ignore.
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-", " proprietary attribute \"ui-sortable\""]
 
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
