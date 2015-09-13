@@ -38,5 +38,27 @@ set hlsearch
 " syntastic errors to ignore.
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-", " proprietary attribute \"ui-sortable\""]
 
+" Command-T
+" Ignore bower components and npm modules when indexing
+let g:CommandTWildIgnore=&wildignore . ",**/bower_components/*,**/node_modules/*"
+
+let mapleader=","
+
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
+
+:nnoremap <F5> :buffers<CR>:buffer<Space>
+
+" Put plugins and dictionaries in this dir (also on Windows)
+let vimDir = '$HOME/.vim'
+let &runtimepath.=','.vimDir
+
+" Keep undo history across sessions by storing it in a file
+if has('persistent_undo')
+    let myUndoDir = expand(vimDir . '/undodir')
+    " Create dirs
+    call system('mkdir ' . vimDir)
+    call system('mkdir ' . myUndoDir)
+    let &undodir = myUndoDir
+    set undofile
+endif
