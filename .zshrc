@@ -87,6 +87,7 @@ if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 # local maven repository
 export M2_REPO=~/.m2/repository
+export ANSIBLE_INVENTORY=~/ansible_hosts
 
 
 # ########
@@ -98,10 +99,12 @@ export M2_REPO=~/.m2/repository
 # ########
 #
 # Example aliases
-alias zshconfig="subl ~/.zshrc"
-alias envconfig="subl ~/Projects/config/env.sh"
+alias zshc="vi ~/.zshrc"
+alias vimc="vi ~/.vimrc"
+alias tmuxc="vi ~/.tmux.conf"
 
 alias pss="ps aux | grep "
+alias pgrep="pgrep -il"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
