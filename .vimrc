@@ -40,7 +40,7 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-", " propr
 
 " Command-T
 " Ignore bower components and npm modules when indexing
-let g:CommandTWildIgnore=&wildignore . ",**/bower_components/*,**/node_modules/*"
+let g:CommandTWildIgnore=&wildignore . ",**/bower_components/*,**/node_modules/*,**/dist/*"
 
 let mapleader=","
 
