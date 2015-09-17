@@ -37,6 +37,7 @@ set hlsearch
 
 " syntastic errors to ignore.
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-", " proprietary attribute \"ui-sortable\""]
+let g:syntastic_disabled_filetypes=['html']
 
 " Command-T
 " Ignore bower components and npm modules when indexing
