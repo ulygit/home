@@ -83,7 +83,7 @@ bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 
 # initialize jenv if it's present
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+eval "$(jenv init -)"
 
 # local maven repository
 export M2_REPO=~/.m2/repository
@@ -103,7 +103,6 @@ alias zshc="vi ~/.zshrc"
 alias vimc="vi ~/.vimrc"
 alias tmuxc="vi ~/.tmux.conf"
 
-alias pss="ps aux | grep "
 alias pgrep="pgrep -il"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
@@ -116,4 +115,8 @@ function vizsh() {
   vi ~/.zshrc;
   source ~/.zshrc;
   echo "Sourced ~/.zshrc";
+}
+
+function pss() {
+  ps aux | awk "NR == 1 || /$1/"
 }
