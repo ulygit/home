@@ -49,7 +49,7 @@ plugins=(git colored-man colorize github vagrant virtualenv pip python brew osx 
 
 # User configuration
 
-export PATH="$HOME/.node/bin:/usr/local/heroku/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/grant/.jenv/shims"
+export PATH="/usr/local/CrossPack-AVR/bin/:/usr/local/opt/sqlite/bin:$HOME/.node/bin:/usr/local/heroku/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/grant/.jenv/shims"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -88,6 +88,9 @@ eval "$(jenv init -)"
 # local maven repository
 export M2_REPO=~/.m2/repository
 export ANSIBLE_INVENTORY=~/ansible_hosts
+
+# github api token for homebrew
+export HOMEBREW_GITHUB_API_TOKEN=e9e63a6373b3fec414a6b70035080f37a9745c71
 
 
 # ########
