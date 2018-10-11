@@ -29,6 +29,8 @@ colorscheme distinguished
 imap <C-CR> <CR><Esc>O
 
 set hlsearch
+set number
+set relativenumber
 
 " This does what it says on the tin. It will check your file on open too, not
 " just on save.
