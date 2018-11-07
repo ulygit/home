@@ -53,7 +53,9 @@ export PATH="/usr/local/CrossPack-AVR/bin/:/usr/local/opt/sqlite/bin:$HOME/.node
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-source ~/.credentials
+if [ -r ~/.credentials ]; then
+	source ~/.credentials
+fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
